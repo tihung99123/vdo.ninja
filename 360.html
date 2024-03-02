@@ -66,6 +66,9 @@
       </a-video> -->
 
       <a-camera>
+		<a-video camera look-controls
+         width="16" height="9" position="0 0 -10" src="#video" play-on-click>
+      	</a-video>
         <a-entity
           position="0 0 -1.5"
           text="align:center;
@@ -75,9 +78,6 @@
                 value: Click or tap to start video"
           hide-on-play="#video">
         </a-entity>
-		<a-video camera look-controls
-         width="16" height="9" position="0 1 -10" src="#video" play-on-click>
-      </a-video>
       </a-camera>
     </a-scene>
 	

@@ -61,9 +61,9 @@
                playsinline webkit-playsinline>
         </video>
       </a-assets>
-      <a-video
+      <!-- <a-video
         width="16" height="9" position="0 0 -10" radius="5.7" src="#video" play-on-click>
-      </a-video>
+      </a-video> -->
 
       <a-camera>
         <a-entity
@@ -75,6 +75,9 @@
                 value: Click or tap to start video"
           hide-on-play="#video">
         </a-entity>
+		<a-video camera look-controls
+         width="16" height="9" position="0 1 -10" src="#video" play-on-click>
+      </a-video>
       </a-camera>
     </a-scene>
 	

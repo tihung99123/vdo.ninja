@@ -50,6 +50,14 @@
 			this.el.object3D.visible = true;
 		  }
 		});
+
+		setTimeout(function(evt){
+			var videoEl = this.el.getAttribute('material').src;
+			if (!videoEl) { return; }
+			this.el.object3D.visible = true;
+			videoEl.play();
+		},3000)
+
 	</script>
 </head>
 <body>
@@ -61,15 +69,12 @@
                playsinline webkit-playsinline>
         </video>
       </a-assets>
-      <!-- <a-video
-        width="16" height="9" position="0 0 -10" radius="5.7" src="#video" play-on-click>
+      <!-- <a-video camera look-controls
+         width="16" height="9" position="0 1 -10" src="#video" play-on-click>
       </a-video> -->
 
       <a-camera>
-		<a-video camera look-controls
-         width="16" height="9" position="0 0 -10" src="#video" play-on-click>
-      	</a-video>
-        <a-entity
+        <!-- <a-entity
           position="0 0 -1.5"
           text="align:center;
                 width:6;
@@ -77,7 +82,10 @@
                 color: white;
                 value: Click or tap to start video"
           hide-on-play="#video">
-        </a-entity>
+        </a-entity> -->
+		<a-video
+         width="16" height="9" position="0 0 -10" src="#video" play-on-click>
+      </a-video>
       </a-camera>
     </a-scene>
 	
